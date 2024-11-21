@@ -16,4 +16,5 @@ urlpatterns = [
     path('adopt/<int:kitty_id>/', views.adopt_kitty, name='adopt_kitty'), 
     path('add-kitty/', views.add_kitty, name='add_kitty'),
     path('adopt/details/<str:adopt_id>/', views.adopt_details, name='adopt_details'),
+    path('kitty/<int:id>/', views.kitty_detail, name='kitty_detail'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -177,6 +177,10 @@ def view_profile(request):
     return render(request, 'Kitty/view_profile.html', {'user': user})
 
 
+def kitty_detail(request, id):
+    kitty = get_object_or_404(Kitty, id=id)
+    return render(request, 'kitty/kitty_detail.html', {'kitty': kitty})
+
 @login_required
 def adopt_kitty(request, kitty_id):
     kitty = get_object_or_404(Kitty, id=kitty_id)

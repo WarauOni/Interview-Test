@@ -32,6 +32,7 @@
                     {% csrf_token %}
                     <button type="submit" class="btn btn-success">Adopt Me!</button>
                 </form>
+                <a href="{% url 'kitty_detail' kitty.id %}" class="btn btn-info mt-4">Know Me!</a>
             </div>
         </div>
     {% endfor %}
